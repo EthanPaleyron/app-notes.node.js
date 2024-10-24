@@ -12,4 +12,31 @@ function createBD() {
     )`); // writing to notes.db
   return db;
 }
-module.exports = { createBD };
+
+function getAll() {
+  const notes = db.prepare("SELECT * FROM notes");
+  const info = notes.all();
+  return info;
+}
+
+function insert(title, content) {
+  const insert = db.prepare("INSERT INTO notes (title, content) VALUES (?, ?)");
+  const info = insert.run(title, content);
+  return info;
+}
+
+function deleteNote(id) {
+  const deleteNote = db.prepare("DELETE FROM notes WHERE id = ?");
+  const info = deleteNote.run(id);
+  return info;
+}
+
+function updateNote(id, title, content) {
+  const update = db.prepare(
+    "UPDATE notes SET title = ?, content = ? WHERE id = ?"
+  );
+  const info = update.run(title, content, id);
+  return info;
+}
+
+module.exports = { createBD, getAll, insert, deleteNote, updateNote };

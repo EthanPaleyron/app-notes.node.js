@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Notes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form onsubmit="addNote(event)">
-        <input id="title" placeholder="Titre">
-        <textarea id="content" placeholder="Contenu"></textarea>
+    <h1>App Notes</h1>
+    <form class="form-insert">
+        <input type="text" id="title" name="title" placeholder="Titre">
+        <textarea id="content" name="content" placeholder="Contenu"></textarea>
         <button>Ajouter</button>
     </form>
 
     <div id="notes-list">
     </div>
-
 
     <script type="module" src="script.js"></script>
 </body>

@@ -1,48 +1,46 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.note-form {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
+
+h1 {
+  margin: auto;
 }
-.note-form input, .note-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+
+.form-insert {
+  margin: 1.5rem 5%;
+  padding: 1rem;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.notes-list {
-    margin-top: 20px;
+
+#notes-list {
+  margin: 1.5rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.note {
-    position: relative;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+#notes-list .note {
+  position: relative;
+  border: 1px solid #000;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.note h3 {
-    margin-top: 0;
-    margin-right: 30px;
+
+.btnDelete {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1.5rem;
 }
-.delete-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.delete-btn:hover {
-    background: #cc0000;
-}
-button {
-    padding: 5px 10px;
-    cursor: pointer;
+
+.hide {
+  display: none;
 }
